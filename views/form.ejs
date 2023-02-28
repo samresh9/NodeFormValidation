@@ -1,0 +1,65 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  
+
+   
+</head>
+<body>
+    <div class="container">
+    <form id="my-form" method="post" action="/submit">
+
+        <div class="box1">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="<%= locals.name %>">
+          <% if (errors && errors.name) { %>
+     <p class="error"><%= errors.name %></p>
+    <% } %>
+            
+        </div>
+        <div class="box1">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" value="<%= locals.email %>">
+   <% if (errors && errors.email) { %>
+     <p  class="error"><%= errors.email %></p>
+    <% } %>
+            
+        </div>
+        <div class="box1">
+            <label for="Number">Phone Number</label>
+            <input type="tel" name="number" id="number" value="<%= locals.number %>">
+                <% if (errors && errors.number) { %>
+     <p  class="error"><%= errors.number %></p>
+    <% } %>
+        </div>
+        <div class="box2">
+            <label for="gender">Gender</label>
+            <label><input type="radio" name="gender" value="male" id="male" <% if (locals.gender === 'male') { %> checked <% } %> >Male</label>
+            <label><input type="radio" name="gender" value="female" id="Female" <% if (locals.gender === 'female') { %> checked <% } %>>Female</label>
+            <label><input type="radio" name="gender" value="others"id="Others" <% if (locals.gender === 'others') { %> checked <% } %> >Others</label>
+                     <% if (errors && errors.gender) { %>
+     <p  class="error"><%= errors.gender %></p>
+    <% } %>
+        </div>
+        <div class="box2">
+            <label for="hobbies">Hobbies</label>
+            <label><input type="checkbox" name="hobbies1" value="Reading" id="reading"  <% if (locals.hobbies1 === 'reading') { %> checked <% } %>>Reading </label>
+            <label><input type="checkbox" name="hobbies2" value="Travelling" id="travelling" <% if (locals.hobbies2 === 'Travelling') { %> checked <% } %>>Travelling</label>
+            <label><input type="checkbox" name="hobbies3" value="Listening Music" id="music" <% if (locals.hobbies3 === 'Listening Music') { %> checked <% } %>>Listening Music</label>
+                     <% if (errors && errors.hobbie) { %>
+     <p  class="error"><%= errors.hobbie %></p>
+    <% } %>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    </div>
+
+    
+</body>
+</html>

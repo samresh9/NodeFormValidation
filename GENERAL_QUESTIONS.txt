@@ -1,0 +1,43 @@
+1.What excites or interests you about coding? What did you learn this week?
+=>What excites me most about coding is the ability to bring ideas to life , creativity and problem solving through continuous learning.
+ I love the creative and analytical aspects of programming, as I get satisfied when I see my code working seamlessly.
+As I am trying my best to engage myself more into coding and learning new ways and technology. This week I learned about authenticatioin
+using session and jwt in node js. I also developed a url shortner project from those learnings.
+
+2.What is a recent technical challenge you experienced and how did you solve it?
+A recent technical challenge I experienced is just lately while coding for this assignment when I tried to validate checkbox value.
+Problem:-
+While validating form data on the server-side using Express and Node, I encountered an issue with validating checkboxes. 
+Specifically, I had trouble checking the length of the checkbox values because they had multiple names and the values parsed when
+the checkbox was empty was undefined and I had to give error only when all the values were undefined.
+
+Solution:-
+To address this challenge, I first parsed the checkbox values and stored them in an array called "hobbies". I then passed this
+ array to a self-defined function called "hobbyValidation" that was used for validation. Within the "hobbyValidation" function, 
+ I used a forEach loop to iterate through the hobbies array and set a variable "i" to 0, incrementing it for every iteration.
+  After the loop, I checked if the value of "i" was 0. If so, I updated the error message. This
+ approach allowed me to successfully validate the checkbox values and ensure that the appropriate error messages were displayed
+ with the help of ejs.
+
+
+3.Talk about your preferred development environment (tools and technologies you prefer using) or a cool project that you've recently worked on (if any).
+As I am a learner and learning backend technologies, I prefer using tools and technologies such as :-
+- Node.js for backend along with express.js framework,
+- MongoDB,MySql for database,
+- html,css,tailwind.css,bootstrap,Js for frontend development,
+-RESTful APIs,
+-Git and Github for version control
+-VsCode as IDE
+
+Recently I worked on my own small project for shortening given url and storing it to the database along with user authentication using
+jwt method.
+
+4.What is your general expectation from this internship program?
+To be a backend developer and have a competent programming skills along with high problem solving mindset 
+and be able to make a meaningful contribution to the company. I also expect to gain valuable experience and make a positive impact 
+during my internship program, while also building connections and learning from experienced professionals.
+
+
+5.What mediums do you prefer to learn programming?
+I usually prefer learnig programming  through one on one consulting, interactive video tutorials with coding excersises 
+and solving logical programming questions.
